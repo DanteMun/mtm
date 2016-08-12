@@ -52,8 +52,8 @@
           <div class="card-content">
           <form method="POST" enctype="multipart/form-data" class="text-center">
                  {% csrf_token %}
-                 <button type="submit" class="btn btn-primary btn-lg" onclick="window.open('bid/new','win','width=650,height=400')";>신청하기
-                 <span class="badge">{{mentor.vote_set.count}}</span></button>
+                 <button type="submit" class="btn btn-primary btn-lg" onclick="bid/new";>신청하기
+                 </button>
           </form>
           </div>
           <div>

@@ -1,0 +1,16 @@
+{% extends 'mentoring/base.html' %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% block content %}
+{% csrf_token %}
+
+      <form class="form-horizontal ng-pristine ng-valid">
+        <fieldset style="display:block; margin-left:20px; margin-right:20px;">
+           <form role="form" action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_field form.price%}
+                <div align="center">
+                <button type="submit" class="btn btn-inverted btn-bold btn-default" align="center" style="margin-bottom:10px;">입찰하기</button></div>
+        </fieldset>
+      </form>
+{% endblock %}

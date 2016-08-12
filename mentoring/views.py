@@ -227,7 +227,7 @@ def bid_by_mentor_detail(request, post_pk, pk):
 def bid_by_mentor_new(request, post_pk):
     post_by_mentee = get_object_or_404(Post_By_Mentee, pk=post_pk)
     if request.method == "POST":
-        form = Bid_By_MentorForm(request.POST, request,FILES)
+        form = Bid_By_MentorForm(request.POST)
         if form.is_valid():
             bid_by_mentor = form.save(commit=False)
             bid_by_mentor.author = request.user
