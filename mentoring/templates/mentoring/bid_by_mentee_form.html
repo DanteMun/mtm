@@ -14,6 +14,7 @@
    </head>
    <body>
 
+
 <div id="BidModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
   <div class="modal-content">
@@ -52,3 +53,19 @@
       <script src="js/bootstrap.min.js"></script>
    </body>
 </html>
+
+
+        <fieldset style="display:block; margin-left:20px; margin-right:20px;">
+           <form role="form" action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div align="center">
+                {% buttons %}
+
+                <button type="submit" class="btn btn-inverted btn-bold btn-default" align="center" style="margin-bottom:10px;" onclick="window.close()">{% bootstrap_field form.price %}입찰하기</button>
+                {% endbuttons %}
+                </div>
+            </form>
+        </fieldset>
+
+{% endblock %}
+
